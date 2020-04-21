@@ -55,4 +55,19 @@ public class TriangleValidatorTest {
         TriangleValidator validator = new TriangleValidator();
         Assert.assertFalse(validator.isTriangle(4, 3, -5));
     }
+    @Test
+    public void isTriangleZeroA() {
+        TriangleValidator validator = new TriangleValidator();
+        Assert.assertFalse(validator.isTriangle(0, 3, 5));
+    }
+    @Test
+    public void isTriangleZeroB() {
+        TriangleValidator validator = new TriangleValidator();
+        Assert.assertFalse(validator.isTriangle(4, 0, 5));
+    }
+    @Test
+    public void isTriangleZeroC() {
+        TriangleValidator validator = new TriangleValidator();
+        Assert.assertFalse(validator.isTriangle(0, 3, 0));
+    }
 }
